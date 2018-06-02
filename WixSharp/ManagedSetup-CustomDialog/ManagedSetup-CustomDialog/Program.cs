@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 using WixSharp;
 using WixSharp.Forms;
+using WixSharpSetup;
 
 namespace ManagedSetup_CustomDialog
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             var project = new ManagedProject("MyProduct",
                              new Dir(@"%ProgramFiles%\My Company\My Product",
@@ -38,32 +38,33 @@ namespace ManagedSetup_CustomDialog
             project.AfterInstall += Msi_AfterInstall;
 
             //project.SourceBaseDir = "<input dir path>";
-            //project.OutDir = "<output dir path>";
+            project.OutDir = "bin";
+            project.LicenceFile = "License.rtf";
 
             ValidateAssemblyCompatibility();
 
             project.BuildMsi();
         }
 
-        static void Msi_Load(SetupEventArgs e)
+        private static void Msi_Load(SetupEventArgs e)
         {
             if (!e.IsUninstalling)
                 MessageBox.Show(e.ToString(), "Load");
         }
 
-        static void Msi_BeforeInstall(SetupEventArgs e)
+        private static void Msi_BeforeInstall(SetupEventArgs e)
         {
             if (!e.IsUninstalling)
                 MessageBox.Show(e.ToString(), "BeforeInstall");
         }
 
-        static void Msi_AfterInstall(SetupEventArgs e)
+        private static void Msi_AfterInstall(SetupEventArgs e)
         {
             if (!e.IsUISupressed && !e.IsUninstalling)
                 MessageBox.Show(e.ToString(), "AfterExecute");
         }
 
-        static void ValidateAssemblyCompatibility()
+        private static void ValidateAssemblyCompatibility()
         {
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
