@@ -31,8 +31,8 @@ namespace ManagedSetup_CustomUI
                                            .Add<ExitDialog>();
 
             //project.SourceBaseDir = "<input dir path>";
-            //project.OutDir = "<output dir path>";
-
+            project.OutDir = "bin";
+            project.LicenceFile = "License.rtf";
             ValidateAssemblyCompatibility();
 
             project.BuildMsi();
