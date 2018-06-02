@@ -14,7 +14,8 @@ namespace WixSharpSetup
             project.GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b");
             //project.SourceBaseDir = "<input dir path>";
             //project.OutDir = "<output dir path>";
-
+            project.LicenceFile = "License.rtf";
+            project.OutDir = "bin";
             project.BuildMsi();
         }
     }
