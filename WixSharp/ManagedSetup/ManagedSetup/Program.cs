@@ -39,7 +39,8 @@ namespace ManagedSetup
             project.AfterInstall += Msi_AfterInstall;
 
             //project.SourceBaseDir = "<input dir path>";
-            //project.OutDir = "<output dir path>";
+            project.OutDir = "bin";
+            project.LicenceFile = "License.rtf";
 
             project.BuildMsi();
         }
