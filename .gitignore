@@ -2,6 +2,7 @@
 *.favdoc
 packages/
 packages
+node_modules/
 #-------------------------------------------------------------------------------
 # VisualStudio
 
