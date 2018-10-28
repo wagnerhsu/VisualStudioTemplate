@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28218.60
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWizard", "MvcWizard\MvcWizard.csproj", "{44271C3F-2361-43C8-8233-C407E7FBC1AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44271C3F-2361-43C8-8233-C407E7FBC1AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44271C3F-2361-43C8-8233-C407E7FBC1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44271C3F-2361-43C8-8233-C407E7FBC1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44271C3F-2361-43C8-8233-C407E7FBC1AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1169BAB-0644-4A4B-9B1D-F9EC109F9679}
+	EndGlobalSection
+EndGlobal
